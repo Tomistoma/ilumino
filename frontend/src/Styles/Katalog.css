@@ -1,0 +1,80 @@
+.katalog-wrapper {
+    background-color: #000;
+    color: #e4e500;
+    padding: 60px 20px;
+    min-height: 100vh;
+    margin-top: 100px;
+
+  }
+  
+  .katalog-heading {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #e4e500;
+    text-align: left;
+    margin-left: 19%;
+  }
+  
+  .product-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .product-text {
+    flex: 1;
+    max-width: 300px;
+    padding: 20px;
+  }
+  
+  .product-text h3 {
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  
+  .product-text p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.5;
+  }
+  
+  .product-image-wrapper {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .product-image {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(228, 229, 0, 0.3);
+  }
+  
+  .spacer {
+    flex: 1;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .product-row {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .product-text,
+    .product-image-wrapper,
+    .spacer {
+      max-width: 100%;
+      flex: none;
+      padding: 10px 0;
+    }
+  
+    .spacer {
+      display: none;
+    }
+  }
+  

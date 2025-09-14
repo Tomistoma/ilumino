@@ -1,0 +1,26 @@
+.red-page {
+    background-color: #000;
+    color: #e4e500;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    margin-top: 200px;
+  }
+
+
+
+  .red-hero-image {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(228, 229, 0, 0.6);
+  }
+  
+
+  
+  .red-order-button {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  
+  

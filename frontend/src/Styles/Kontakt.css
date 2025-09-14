@@ -1,0 +1,154 @@
+/* Kontakt.css – stylováno pro shodu s vizuálem katalogu a detailů, optimalizováno pro příjem zakázek */
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0a0a0a;
+  color: #ccc;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.leader-section {
+  margin-top: 200px;
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 40px;
+  background-color: #111;
+  border-radius: 16px;
+}
+
+.leader-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #4CC9F0;
+}
+
+.leader-section h2 {
+  color: #4CC9F0;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.contact-info h2 {
+  color: #FFE135;
+  margin-bottom: 15px;
+}
+
+.contact-info a {
+  color: #4CC9F0;
+  text-decoration: none;
+}
+
+.inquiry-form {
+  background-color: #111;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.inquiry-form h2 {
+  color: #FF6F61;
+  margin-bottom: 10px;
+}
+
+.inquiry-form p {
+  color: #aaa;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: #aaa;
+  font-weight: 500;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 14px;
+  background-color: #222;
+  color: #eee;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #4CC9F0;
+  background-color: #1c1c1c;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  background-color: #FFE135;
+  color: #000;
+  font-weight: bold;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  max-width: 300px;
+}
+
+.submit-btn:hover {
+  background-color: #ffd500;
+}
+
+/* Specifická poznámka pro zakázky */
+.inquiry-form label[for="message"]:last-of-type {
+  color: #999;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  display: block;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 0 10px;
+  }
+
+  .leader-section,
+  .contact-info,
+  .inquiry-form {
+    padding: 20px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}
