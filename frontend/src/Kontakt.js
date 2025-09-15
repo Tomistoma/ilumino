@@ -3,7 +3,6 @@ import './Styles/Main.css';
 import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import leaderImage from './Assets/1.png';
 import './Styles/Kontakt.css';
 
 const Kontakt = () => {
@@ -21,10 +20,9 @@ const Kontakt = () => {
       <div className="contact-container">
         {/* Úvodní sekce */}
         <div className="leader-section" style={{ marginTop: '200px' }}>
-          <img src={leaderImage} alt="Zakladatel značky" className="leader-image" />
-          <h2>Zakázky tvoříme ručně</h2>
+          <h2>Produkty vyvíjíme důmyslně</h2>
           <p>
-            Každý světelný extrakt vzniká v naší laboratoři s precizností a vášní. Pokud máte zájem o spolupráci, produkt na míru, catering nebo větší odběr – napište nám. Ozveme se zpět rychle a konkrétně.
+            Na vývoj našich produktů vynakládáme stejné metody jako pro vývoj léčiv. Všechny naše produkty jsou nejen efektní a zdravotně nezávadným nýbrž i zdraví prospěšné.
           </p>
         </div>
 
@@ -45,7 +43,7 @@ const Kontakt = () => {
         <div className="inquiry-form">
           <h2>Poptejte svou zakázku</h2>
           <p style={{ color: '#ccc', marginBottom: '20px' }}>
-            Chcete vlastní příchuť? Světelný drink na akci? Balíček pro bar nebo showroom? Vyplňte formulář níže a my se Vám ozveme s návrhem.
+            Zaujal Vás náš produkt a rádi byste se stali trvalým, či snad jednorázovým odběratelem? 
           </p>
           <form>
             <div className="form-group">
@@ -62,7 +60,13 @@ const Kontakt = () => {
             </div>
             <div className="form-group">
               <label htmlFor="message">Zpráva / Specifikace zakázky:</label>
-              <textarea id="message" name="message" rows="5" placeholder="Popište, co hledáte nebo o co máte zájem – množství, typ události, styl drinku apod." required></textarea>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Popište, co hledáte nebo o co máte zájem – množství (kolik drinků byste chtěli rozsvítit)"
+                required
+              ></textarea>
               <label htmlFor="message">Po odeslání se obvykle ozveme do 24 hodin s konkrétní nabídkou.</label>
             </div>
 

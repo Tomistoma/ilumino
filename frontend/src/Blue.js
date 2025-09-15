@@ -3,180 +3,183 @@ import './Styles/Detail.css';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
-import { Button, Stack, CardMedia, Box, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+import {
+  Button,
+  CardMedia,
+  Box,
+  Typography,
+  Container,
+  Grid,
+} from '@mui/material';
 
 const Blue = () => {
   return (
     <div className="blue-page">
       <Navbar />
-      <Box textAlign="center" sx={{ mt: 6 }}>
-  <Typography variant="h2" color="#B90E0A">
-    Noctura Red
-  </Typography>
-  <Typography variant="subtitle1" color="#ccc" sx={{ mt: 1 }}>
-   Červené fluorescenční barvivo pro temné večery plné vášně a pokušení.
-  </Typography>
-</Box>
-      {/* Centrální nadpis */}
-      <Box textAlign="center" sx={{ mt: 6 }}>
-        <Typography variant="h2" color="#4CC9F0">
-          Azzura Blue
-        </Typography>
-        <Typography variant="subtitle1" color="#ccc" sx={{ mt: 1 }}>
-          Světlé fluorescenční barvivo pro osvěžující drinky a tiché večery, které se blýsknou.
-        </Typography>
+
+      {/* Optional top banner (Noctura Red) */}
+      <Box sx={{ pt: { xs: 8, md: 12 }, pb: { xs: 2, md: 3 }, textAlign: 'center' }}>
+        <Container maxWidth="md">
+          <Typography variant="h2" color="#B90E0A" sx={{ fontSize: { xs: '2rem', md: '3rem' } }}>
+            Noctura Red
+          </Typography>
+          <Typography variant="subtitle1" color="#ccc" sx={{ mt: 1, px: { xs: 2, md: 0 } }}>
+            Červené fluorescenční barvivo pro temné večery plné vášně a pokušení.
+          </Typography>
+        </Container>
       </Box>
 
-      {/* Hlavní sekce */}
-      <Box className="blue-center-container">
-  <Stack direction="row" justifyContent="center" alignItems="center" spacing={6}>
-    {/* Levý text */}
-    <Box className="blue-side-text" sx={{ textAlign: 'right' }}>
-      <Typography variant="h6" color="#4CC9F0" gutterBottom>
-        Ledová záře v pohybu
-      </Typography>
-      <Typography sx={{ marginBottom: '75px', width: '80%', marginLeft: '20%' }} variant="body1" color="#ccc">
-        Azzura Blue reaguje i na nejjemnější dotek UV světla. V nápoji vytváří světlý, až ledově modrý efekt. Neoslňuje, ale přitahuje. Jemně a s jistotou.
-      </Typography>
-
-      <Typography variant="h6" color="#4CC9F0" gutterBottom>
-        Chuť čerstvého vzduchu
-      </Typography>
-      <Typography sx={{ marginBottom: '50px', width: '80%', marginLeft: '20%' }} variant="body1" color="#ccc">
-        Nechává nápoj chutnat tak, jak má. Bez aromatu, bez pachuťí. Jako čistý tón mezi akordy. Ideální pro toniky, bílé koktejly, citrus a bylinky.
-      </Typography>
-
-      <Typography variant="h6" color="#4CC9F0" gutterBottom>
-        Snadné jako ledová kapka
-      </Typography>
-      <Typography sx={{ marginBottom: '100px', width: '80%', marginLeft: '20%' }} variant="body1" color="#ccc">
-        Stačí pár kapek – rozsvítí se ti sklenka. Není potřeba míchat, odměřovat, rozmýšlet. Azzura Blue je intuitivní jako úsměv při prvním doušku.
-      </Typography>
-    </Box>
-          {/* Obrázek */}
-          <Box className="blue-image-box">
-            <CardMedia
-              component="img"
-              image="/white.png"
-              alt="Azzura Blue Effect"
-              sx={{ width: '600px', maxWidth: '100%', objectFit: 'contain', borderRadius: '16px' }}
-            />
-          </Box>
-
-          {/* Pravý text */}
-          <Box className="blue-side-text">
-            <Typography variant="h6" color="#4CC9F0" gutterBottom>
-              Azzura Blue – víc než světlo
-            </Typography>
-            <Typography sx={{ marginBottom: '80px', width: '80%' }} variant="body1" color="#ccc">
-              <ul style={{ paddingLeft: '1.2rem', color: '#ccc' }}>
-                <li>Podporuje trávení (Phytomedicine, 2001)</li>
-                <li>Jemně stimuluje nervovou soustavu (The Merck Index, 14th ed.)</li>
-                <li>Pomáhá zmírnit svalové křeče (American Journal of Medicine, 2005)</li>
-                <li>Má přirozené fluorescenční vlastnosti (J. of Chemical Education, 1998)</li>
-                <li>Ve 3. světě se využívá pro boj s Malarii</li>
-              </ul>
-            </Typography>
-
-            <Typography variant="h6" color="#4CC9F0" gutterBottom>
-              Český původ, globální kvalita
-            </Typography>
-            <Typography sx={{ marginBottom: '50px', width: '80%' }} variant="body1" color="#ccc">
-              Vyvinuto v ČR. Bez barviv, konzervantů, živočišných složek. Elegantní, etické a funkční.
-            </Typography>
-
-            <Typography variant="h6" color="#4CC9F0" gutterBottom>
-              Kompozice
-            </Typography>
-            <Typography sx={{ marginBottom: '100px', width: '90%' }} variant="body1" color="#ccc">
-              Vysoce purifikovaný extrakt s obsahem chininu, voda.
-            </Typography>
-          </Box>
-        </Stack>
+      {/* Main hero for Azzura Blue */}
+      <Box sx={{ pt: { xs: 6, md: 8 }, pb: { xs: 6, md: 8 }, textAlign: 'center' }}>
+        <Container maxWidth="md">
+          <Typography variant="h2" color="#4CC9F0" sx={{ fontSize: { xs: '2rem', md: '3rem' } }}>
+            Azzura Blue
+          </Typography>
+          <Typography variant="subtitle1" color="#ccc" sx={{ mt: 1, px: { xs: 2, md: 0 } }}>
+            Světlé fluorescenční barvivo pro osvěžující drinky a večery s decentní atmosférou.
+          </Typography>
+        </Container>
       </Box>
 
-      {/* Doporučení a použití */}
-      <Box sx={{ maxWidth: '1000px', margin: '60px auto', px: 3 }}>
-        <Typography variant="h4" color="#4CC9F0" gutterBottom>
+      {/* Content grid */}
+      <Container maxWidth="lg">
+        <Grid
+          container
+          spacing={{ xs: 4, md: 6 }}
+          alignItems="center"
+          justifyContent="center"
+        >
+          {/* Left text */}
+          <Grid item xs={12} md={4}>
+            <Box sx={{ textAlign: { xs: 'left', md: 'right' } }}>
+              <Typography variant="h6" color="#4CC9F0" gutterBottom>
+                Osvěžující záře
+              </Typography>
+              <Typography variant="body1" color="#ccc" sx={{ mb: { xs: 3, md: 6 } }}>
+                Azzura Blue reaguje i na nejjemnější dotek UV světla. V nápoji vytváří světlý, až ledově modrý efekt. Neoslňuje, ale přitahuje.
+              </Typography>
+
+              <Typography variant="h6" color="#4CC9F0" gutterBottom>
+                Hořké pokušení
+              </Typography>
+              <Typography variant="body1" color="#ccc" sx={{ mb: { xs: 3, md: 6 } }}>
+                Se silně hořkým aromatem se hodí do tvrdších a surovějších kombinací. Původně se izoluje z kůry břízy a lze tedy dobře kombinovat s různými bylinky a přírodními aromaty.
+              </Typography>
+
+              <Typography variant="h6" color="#4CC9F0" gutterBottom>
+                Víc než jak ho znáte
+              </Typography>
+              <Typography variant="body1" color="#ccc" sx={{ mb: { xs: 4, md: 10 } }}>
+                Přirozeně se nachází v toniku, avšak Azzura Blue umožňuje modrý vibe nastavit i u jiných drinkových kombinací.
+              </Typography>
+            </Box>
+          </Grid>
+
+          {/* Image */}
+          <Grid item xs={12} md={4}>
+            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+              <CardMedia
+                component="img"
+                image="/white.png"
+                alt="Azzura Blue Effect"
+                sx={{
+                  width: { xs: '100%', sm: '90%', md: '100%' },
+                  maxWidth: 600,
+                  objectFit: 'contain',
+                  borderRadius: '16px',
+                }}
+              />
+            </Box>
+          </Grid>
+
+          {/* Right text */}
+          <Grid item xs={12} md={4}>
+            <Box sx={{ textAlign: { xs: 'left', md: 'left' } }}>
+              <Typography variant="h6" color="#4CC9F0" gutterBottom>
+                Azzura Blue – víc než světlo
+              </Typography>
+              <Typography variant="body1" color="#ccc" sx={{ mb: { xs: 3, md: 6 } }}>
+                <ul style={{ paddingLeft: '1.2rem', color: '#ccc', margin: 0 }}>
+                  <li>Podporuje trávení (Phytomedicine, 2001)</li>
+                  <li>Jemně stimuluje nervovou soustavu (The Merck Index, 14th ed.)</li>
+                  <li>Pomáhá zmírnit svalové křeče (American Journal of Medicine, 2005)</li>
+                  <li>Má přirozené fluorescenční vlastnosti (J. of Chemical Education, 1998)</li>
+                  <li>Ve 3. světě se využívá pro boj s Malarii</li>
+                </ul>
+              </Typography>
+
+              <Typography variant="h6" color="#4CC9F0" gutterBottom>
+                Český původ, globální kvalita
+              </Typography>
+              <Typography variant="body1" color="#ccc" sx={{ mb: { xs: 3, md: 5 } }}>
+                Vyvinuto v ČR. Bez živočišných složek.
+              </Typography>
+
+              <Typography variant="h6" color="#4CC9F0" gutterBottom>
+                Kompozice
+              </Typography>
+              <Typography variant="body1" color="#ccc" sx={{ mb: { xs: 4, md: 10 } }}>
+                Vysoce purifikovaný extrakt s obsahem chininu, voda.
+              </Typography>
+            </Box>
+          </Grid>
+        </Grid>
+      </Container>
+
+      {/* Recommendations & usage */}
+      <Container maxWidth="md" sx={{ mt: { xs: 8, md: 12 }, mb: { xs: 8, md: 12 } }}>
+        <Typography variant="h4" color="#4CC9F0" gutterBottom sx={{ textAlign: 'center' }}>
           Kam Azzura Blue sedí nejlépe
         </Typography>
 
-        <Typography variant="body1" color="#ccc" sx={{ mb: 3 }}>
-          Nevtíravý efekt, který se nevnucuje – ale kdo ho vidí, ten nezapomene. Azzura Blue vynikne v nápojích, které jsou světlé, čisté, a nechávají barvu dýchat.
+        <Typography variant="body1" color="#ccc" sx={{ mb: 3, textAlign: 'center', px: { xs: 2, md: 6 } }}>
+          Azzura Blue se díky své modré barvě hodí do osvěžujících, hořkých surovějších koktejlů s přírodnějšími aromaty.
         </Typography>
 
-        <Typography variant="h6" color="#4CC9F0" gutterBottom>
+        <Typography variant="h6" color="#4CC9F0" gutterBottom sx={{ mt: 4 }}>
           Doporučené drinky:
         </Typography>
-        <ul style={{ paddingLeft: '1.2rem', color: '#ccc', marginBottom: '30px' }}>
+        <Box component="ul" sx={{ pl: '1.2rem', color: '#ccc', mb: 3 }}>
           <li>🍋 Citrusový spritz s tonikem a rozmarýnem</li>
           <li>🌿 Bílý vermouth s ledem a limetou</li>
           <li>🫧 Nealko perlivý mocktail s grepem a mátou</li>
           <li>🍈 Gin fizz s kapkou citronového bitters</li>
-        </ul>
+        </Box>
 
         <Typography variant="h6" color="#4CC9F0" gutterBottom>
-          Ideální atmosféra:
+          Ideální atmosféra (night mode)
         </Typography>
-        <ul style={{ paddingLeft: '1.2rem', color: '#ccc' }}>
-          <li>✨ Letní terasy, chill-out zóny a pool party</li>
-          <li>🎷 Jazzové večery, rooftop bary</li>
-          <li>🧘‍♀️ Klidné lounge s ambientním podsvícením</li>
-          <li>🎥 Umělecké eventy, fotografie, showreely</li>
-        </ul>
+        <Box component="ul" className="night-mode" sx={{ pl: '1.2rem', color: '#ccc', mb: 3 }}>
+          <li>🌌 Noční kluby s UV a neonovým osvětlením</li>
+          <li>🍸 Cocktail &amp; rooftop bary s výhledem na město</li>
+          <li>🎶 DJ sety a live music večery</li>
+          <li>🔥 Party u bazénu s večerním nasvícením</li>
+          <li>🎭 Performance &amp; art show s fluorescenčními prvky</li>
+          <li>📸 After-dark fotografie &amp; videoprojekce</li>
+        </Box>
 
-        <Typography variant="h6" color="#4CC9F0" gutterBottom>
-          Složení:
-        </Typography>
-        <ul style={{ paddingLeft: '1.2rem', color: '#ccc' }}>
-          <li>Vysoce purifikovaný přírodní extrakt s obsahem chininu</li>
-          <li>Voda</li>
-          <li>Kyselina citrónová</li>
-          <li>Stabilizační složky</li>
-          <li>Přírodní aroma</li>
-        </ul>
-
-        <Typography variant="body2" color="#888" gutterBottom>
+        <Typography variant="body2" color="#888" sx={{ textAlign: 'center' }}>
           Všechny složky odpovídají nařízení (ES) č. 1333/2008. Bez živočišných složek, konzervantů či syntetických barviv.
         </Typography>
 
-        {/* Tabulka cen */}
-        <TableContainer
-          component={Paper}
-          sx={{ backgroundColor: '#111', color: 'white', marginTop: '50px', border: '1px solid #333' }}
-        >
-          <Table>
-            <TableHead>
-              <TableRow>
-                <TableCell sx={{ color: '#4CC9F0', fontWeight: 'bold' }}>Objem</TableCell>
-                <TableCell sx={{ color: '#4CC9F0', fontWeight: 'bold' }}>Cena</TableCell>
-                <TableCell sx={{ color: '#4CC9F0', fontWeight: 'bold' }}>Cena za drink</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {[['10 ml', '149 Kč', '2 Kč'], ['50 ml', '499 Kč', '2 Kč'], ['100 ml', '899 Kč', '2 Kč']].map(
-                ([volume, price, perDrink], idx) => (
-                  <TableRow key={idx}>
-                    <TableCell sx={{ color: '#ddd' }}>{volume}</TableCell>
-                    <TableCell sx={{ color: '#ddd' }}>{price}</TableCell>
-                    <TableCell sx={{ color: '#ddd' }}>{perDrink}</TableCell>
-                  </TableRow>
-                )
-              )}
-            </TableBody>
-          </Table>
-        </TableContainer>
-
-        {/* Tlačítko */}
-      {/* Spodní blok */}
-<Box sx={{ marginTop: '30px', textAlign: 'center' }}>
-  <Link to="/kontakt" style={{ textDecoration: 'none' }}>
-    <Button variant="contained" sx={{ backgroundColor: '#B90E0A', color: '#000', fontWeight: 'bold' }}>
-      Objednat nyní
-    </Button>
-  </Link>
-</Box>
-      </Box>
+        <Box sx={{ mt: 4, textAlign: 'center' }}>
+          <Link to="/kontakt" style={{ textDecoration: 'none' }}>
+            <Button
+              variant="contained"
+              sx={{
+                backgroundColor: '#B90E0A',
+                color: '#000',
+                fontWeight: 'bold',
+                px: 3,
+                py: 1.25,
+                width: { xs: '100%', sm: 'auto' },
+              }}
+            >
+              Objednat nyní
+            </Button>
+          </Link>
+        </Box>
+      </Container>
 
       <Footer />
     </div>

@@ -24,9 +24,9 @@ const Navbar = () => {
   };
 
   const menuItems = [
-    { text: 'Home', icon: <HomeIcon />, href: '/' },
+    { text: 'Domu', icon: <HomeIcon />, href: '/' },
     { text: 'Katalog', icon: <ShoppingCartIcon />, href: '/katalog' },
-    { text: 'Contacts', icon: <ContactMailIcon />, href: '/kontakt' },
+    { text: 'Kontakt', icon: <ContactMailIcon />, href: '/kontakt' },
   ];
 
   const drawerContent = (

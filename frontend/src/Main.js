@@ -17,28 +17,22 @@ import { useNavigate } from 'react-router-dom';
 
 const products = [
   {
-    name: 'AzzuroGlow',
+    name: 'Noctura red',
     to: '/red',
-    image: '/white.png',
-    properties: ['Caffeine', 'Taurine', 'B-Vitamins'],
+    image: '/yellow.png',
+    properties: "Temně rudý příslib, který v klubové tmě září jako zakázané znamení"
   },
   {
-    name: 'CitrusNova',
+    name: 'Pulsewave',
     to: '/yellow',
     image: '/yellow.png',
-    properties: ['L-Theanine', 'Ginkgo Biloba', 'Green Tea Extract'],
+    properties: " Zářivě žluté fluorescenční barvivo pro světlé dny a ještě světlejší noci.",
   },
   {
-    name: 'Relax Mix',
+    name: 'Azzura blue',
     to: '/blue',
     image: '/green.png',
-    properties: ['Magnesium', 'Ashwagandha', 'Chamomile'],
-  },
-  {
-    name: 'Immunity Plus',
-    to: '/red',
-    image: '/drink4.png',
-    properties: ['Vitamin C', 'Zinc', 'Elderberry'],
+    properties: "Chladná modrá vlna, která se vynořuje z temnoty jako ozvěna skrytého oceánu."
   },
 ];
 
@@ -84,7 +78,7 @@ const Main = () => {
           Osviťe svůj zážitek
         </Typography>
         <Typography variant="h6" sx={{ color: '#ccc', maxWidth: '800px', mx: 'auto', lineHeight: 1.7 }}>
-Naše světelné esence nejsou dekorace – jsou zážitek. Vytvářejí okamžik, na který si hosté vzpomenou. Kapky, které za tmy ožijí pod UV světlem, přitáhnou pozornost, vytvoří atmosféru a přemění obyčejný drink v wow efekt. A vy? Získáte odlišení, fotogenický zážitek a důvod, proč se host vrátí.
+Naše světelné esence nejsou dekorace – jsou zážitek. Vytvářejí okamžik, na který si hosté vzpomenou. Kapky, které za tmy ožijí pod UV světlem, přitáhnou pozornost, vytvoří atmosféru a přemění obyčejný drink ve wow efekt. A vy? Získáte odlišení, fotogenický zážitek a důvod, proč se host vrátí.
         </Typography>
       </Box>
 
@@ -153,11 +147,9 @@ Naše světelné esence nejsou dekorace – jsou zážitek. Vytvářejí okamži
                     >
                       {product.name}
                     </Typography>
-                    <ul style={{ margin: 0, paddingLeft: '1.2rem', color: '#ccc', listStyleType: 'circle' }}>
-                      {product.properties.map((prop, idx) => (
-                        <li key={idx} style={{ fontSize: '0.9rem', marginBottom: '0.3rem' }}>{prop}</li>
-                      ))}
-                    </ul>
+                    <p style={{ fontSize: '0.9rem', marginBottom: '0.3rem' , margin: 0, paddingLeft: '1.2rem', color: '#ccc', listStyleType: 'circle', textAlign: "center" }}>                     
+                      {product.properties}
+                    </p>
                   </CardContent>
                 </CardActionArea>
               </Card>

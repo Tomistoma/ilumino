@@ -6,25 +6,28 @@ import Footer from './Footer';
 
 const products = [
   {
-    name: '🌞 Solaris Yellow',
+    name: 'Pulsewave ',
     description:
-      'Sluneční třpyt v kapce. Září i za bílého dne a pod UV exploduje teplým, zářivě žlutým světlem. Pro brunchy, terasy i zlaté hodiny.',
+      'Temně zářivý žlutý akcent, který probouzí skrytý rytmus noci. Jeho fluorescence pod UV světlem připomíná pulzující energii klubových basů a mění každý drink v hypnotický zážitek. Exkluzivní, výrazný, stvořený pro ty, kdo chtějí vyniknout ve stínu neonů.',
     image: '/yellow.png',
     link: '/yellow',
+     accent: '#FFE135',    // yellow
   },
   {
-    name: '🌒 Noctura Red',
+    name: 'Noctura Red',
     description:
-      'Dvojitá identita. Ve dne klidná a modrá, v noci hoří rudým plamenem pod UV. Svádí pohledy, oslovuje emoce. Pro večírky, které nezapomenete.',
+      'Temně rudý příslib, který v klubové tmě září jako zakázané znamení. Jeho fluorescence pod UV světlem se rozpíná jako žhavá žíla energie a proměňuje každý drink v mystický rituál noci. Exkluzivní, nebezpečně svůdný, pro ty, kdo hledají intenzitu ve stínu.',
     image: '/yellow.png',
     link: '/red',
+    accent: '#FF3B3B',    // red
   },
   {
-    name: '💧 Azzura Blue',
+    name: 'Azzura Blue',
     description:
-      'Jako kapka oceánu pod UV. Chladivá, čistá, klidná. Modrá fluorescence, která neřve – ale zanechá dojem.',
+      'Chladná modrá vlna, která se vynořuje z temnoty jako ozvěna skrytého oceánu. Její fluorescence pod UV světlem vytváří hypnotické spektrum, v němž se klub mění v nekonečný prostor. Elegantní, tajemná, stvořená pro noci, co nikdy nekončí.',
     image: '/yellow.png',
     link: '/blue',
+    accent: '#3AA7FF',    // blue
   },
 ];
 
@@ -34,7 +37,7 @@ const Katalog = () => {
       <Navbar />
       <main className="katalog-wrapper">
         <h2 className="katalog-heading" style={{ color: '#FFEA00', textAlign: 'center' }}>
-          ✨ Objev naši kolekci světelných elixírů
+          ✨ Objev naši kolekci světelných aditiv
         </h2>
         {products.map((product, index) => (
           <Link to={product.link} key={index} style={{ textDecoration: 'none' }}>
@@ -50,7 +53,9 @@ const Katalog = () => {
               {index % 2 === 0 ? (
                 <>
                   <div className="product-text">
-                    <h3 style={{ color: '#FFE135', fontSize: '1.8rem' }}>{product.name}</h3>
+                    <h3 style={{ color: product.accent, fontSize: '1.8rem' }}>
+  {product.name}
+</h3>
                     <p style={{ color: '#ccc', fontSize: '1rem', lineHeight: '1.6' }}>{product.description}</p>
                   </div>
                   <div className="product-image-wrapper">
